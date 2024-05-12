@@ -1,0 +1,46 @@
+<div class="currency-converter">
+    <mat-card class="converter-card border-8">
+      <mat-card-header>
+        <mat-card-title>Currency Converter</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="input-group">
+          <mat-form-field appearance="fill">
+            <mat-label>From:</mat-label>
+            <mat-select id="fromCurrency" [(ngModel)]="selectedFromCurrency">
+              <mat-option *ngFor="let currency of currencies" [value]="currency.value">{{ currency.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        
+        <div class="input-group">
+          <mat-form-field appearance="fill">
+            <mat-label>To:</mat-label>
+            <mat-select id="toCurrency" [(ngModel)]="selectedToCurrency">
+              <mat-option *ngFor="let currency of currencies" [value]="currency.value">{{ currency.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        
+        <div class="input-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Amount:</mat-label>
+            <input matInput type="number" id="amount" [(ngModel)]="amount" (input)="convert()">
+          </mat-form-field>
+        </div>
+        
+        <button mat-raised-button color="primary" (click)="convert()">Convert</button>
+        
+        <div *ngIf="convertedAmount !== undefined && errorMessage== undefined" class="result">
+          <p>{{ amount }} {{ selectedFromCurrency }} equals {{ convertedAmount }} {{ selectedToCurrency }}</p>
+          
+            </div>
+
+            <div *ngIf="errorMessage" class="result">
+             <p>{{ errorMessage }}</p>
+            
+            </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
