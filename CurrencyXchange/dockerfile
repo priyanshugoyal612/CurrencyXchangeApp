@@ -1,0 +1,6 @@
+FROM openjdk:21
+WORKDIR /app
+COPY /target/CurrencyXchange*.jar /app/CurrencyXchange.jar
+
+EXPOSE 8080
+CMD ["java", "-jar", "CurrencyXchange.jar"]

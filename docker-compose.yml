@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./CurrencyXchange
+    image: currencyxchange-api
+    networks:
+      - my-network
+    ports:
+      - "8080:8080"
+    
+    
+  frontend:
+    build: ./currencyXchange-ui
+    image: currencyxchange-ui
+    ports:
+      - "4200:4200"
+    networks:
+      - my-network
+ 
+
+
+networks:
+  my-network:
+    name: my-network
