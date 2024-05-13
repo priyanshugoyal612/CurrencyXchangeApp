@@ -7,17 +7,22 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class CurrencyServiceService {
 
-  private baseUrl = 'http://localhost:8080/v1/api/exchange';
+  private baseUrl = 'http://localhost:8080/v1/api';
 
   constructor(private http:HttpClient) { }
 
     currencySubject= new BehaviorSubject<number>(0);
 
     getXchangeRate(fromCurrency: string, toCurrency: string, amount:number):Observable<any>{
-      const  url =  `${this.baseUrl}?fromCurrency=${fromCurrency}&toCurrency=${toCurrency}&amount=${amount}`;
+      const  url =  `${this.baseUrl}/exchange?fromCurrency=${fromCurrency}&toCurrency=${toCurrency}&amount=${amount}`;
       return this.http.get<number>(url);
 
 
+    }
+
+    getAllCurrencies(): Observable<any[]> {
+      const  url =  `${this.baseUrl}/currencies`;
+      return this.http.get<any[]>(url);
     }
 
     getCurrencyExchangeRate(): Observable<number> {
