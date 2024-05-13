@@ -20,10 +20,15 @@ Technical clarification
 • Maven
 • Java 21
 • Angular 17
+• Angular Materials
+• Tailwind CSS  
 • EhCache
 • Grafana
 • Prometheus
 • Docker
+• Loombok
+ 
+
 
 
 
