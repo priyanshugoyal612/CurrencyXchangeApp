@@ -48,12 +48,21 @@ To run the currency conversion application using Docker Compose, follow these st
   * docker-compose up
   * npm start
 
-* After application started you can check the CurrencyXchangeApp
+* After application started you can check the CurrencyXchangeApp UI
   * http://localhost:4200/
+
+    <img width="948" alt="image" src="https://github.com/priyanshugoyal612/CurrencyXchangeApp/assets/110286318/4c3967c5-9f3c-4754-aa02-cadbcc54ca84">
+
   
   * After Backend started you can check the CurrencyXchangeApp
-  * http://localhost:8080/a[i/exchange
+  * http://localhost:8080/v1/api/exchange?fromCurrency=EUR&toCurrency=INR&amount=1
+ 
+    <img width="947" alt="image" src="https://github.com/priyanshugoyal612/CurrencyXchangeApp/assets/110286318/086f41ec-83bc-4c78-801b-52d2760dbd35">
+
   
   * After Grafana started you can check the CurrencyXchangeApp
   * http://localhost:3000/
+ 
+    <img width="959" alt="image" src="https://github.com/priyanshugoyal612/CurrencyXchangeApp/assets/110286318/ed8b55a7-f17f-46d6-a3dc-90e7aa133502">
+
   
