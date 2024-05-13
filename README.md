@@ -12,7 +12,7 @@ nd the API will return the converted value based on the provided exchange rates.
 - Provide a Angular 17 user interface for smooth interactions with the currency conversion service.
 - Containerize the application with Docker for consistent deployment.
 - Add instrumentation with Prometheus and Grafana for real-time monitoring and analytics. Its also preloaded with the dashboard
--
+
 
 
 Technical clarification
