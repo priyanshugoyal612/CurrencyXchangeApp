@@ -45,12 +45,8 @@ To run the currency conversion application using Docker Compose, follow these st
 
    git clone https://github.com/priyanshugoyal612/CurrencyXchangeApp.git
 
-2. Navigate to the project directory then backend app to build the backend:
-  cd CurrencyXchangeApp\CurrencyXchange
-3. To build the backend please run 
-  *  mvn clean install
-
-4. Then navigate back to the project root directory i.e CurrencyXchangeApp and run the docker compose file using below command
+2. Navigate to the project directory 
+ i.e CurrencyXchangeApp and run the docker compose file using below command
   * docker-compose up
     
 * After application started you can check the CurrencyXchangeApp UI

@@ -1,6 +1,12 @@
+FROM maven:latest AS build
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn clean install
+
 FROM openjdk:21
 WORKDIR /app
-COPY /target/CurrencyXchange*.jar /app/CurrencyXchange.jar
+COPY --from=build /app/target/CurrencyXchange*.jar /app/CurrencyXchange.jar
 
 EXPOSE 8080
 CMD ["java", "-jar", "CurrencyXchange.jar"]
