@@ -66,4 +66,10 @@ To run the currency conversion application using Docker Compose, follow these st
  
     <img width="959" alt="image" src="https://github.com/priyanshugoyal612/CurrencyXchangeApp/assets/110286318/ed8b55a7-f17f-46d6-a3dc-90e7aa133502">
 
+  * After Prometheus started you can check the CurrencyXchangeApp
+  * http://localhost:9090/
+
+    <img width="959" alt="image" src="https://github.com/priyanshugoyal612/CurrencyXchangeApp/assets/110286318/aa88d181-5b5d-4130-900f-9a3dcb4f711a">
+
+
   
