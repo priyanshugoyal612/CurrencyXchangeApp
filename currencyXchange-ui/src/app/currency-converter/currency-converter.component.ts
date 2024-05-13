@@ -61,7 +61,7 @@ export class CurrencyConverterComponent  implements OnInit{
       }),
       catchError(() => {
         console.error('Error fetching exchange rate.');
-        this.errorMessage = 'Currently we are only supporting basic currency'; // Set error message
+        this.errorMessage = 'Will be right back'; // Set error message
         
         return EMPTY; // Return empty Observable to suppress error
       })
