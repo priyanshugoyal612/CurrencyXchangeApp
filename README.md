@@ -32,10 +32,10 @@ Technical clarification
 
 
 ## Prerequisites
-Java Development Kit (JDK) version 21
-Docker
-Git
-Maven
+• Java Development Kit (JDK) version 21
+• Docker
+• Git
+• Maven
 
 ## Installation
 
