@@ -2,7 +2,6 @@ package com.currency.exchange.helper;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
-
 import org.ehcache.Cache;
 import org.ehcache.CacheManager;
 import org.slf4j.Logger;

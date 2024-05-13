@@ -19,6 +19,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import com.currency.exchange.exceptions.CurrencyFetchException;
+import com.currency.exchange.exceptions.ExchangeAPIException;
 import com.currency.exchange.model.BaseCurrency;
 import com.currency.exchange.service.ExchangeRateService;
 
@@ -73,7 +74,7 @@ public class ExchangeRateServiceImpl implements ExchangeRateService {
 			throw new CurrencyFetchException("Some Base currenices are forbidden for developer plan ");
 		} catch (Exception e) {
 			LOGGER.error("Error fetching exchange rate: {}", e.getMessage());
-			throw new CurrencyFetchException("Error fetching exchange rate: " + e.getMessage());
+			throw new ExchangeAPIException("Error fetching exchange rate: " + e.getMessage());
 		}
 
 		LOGGER.warn("Failed to fetch exchange rate for {} to {}", from, to);

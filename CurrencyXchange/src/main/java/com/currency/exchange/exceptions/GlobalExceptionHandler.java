@@ -23,9 +23,13 @@ public class GlobalExceptionHandler {
 	}
 
 	@ExceptionHandler(CurrencyFetchException.class)
-	public ResponseEntity<String> handleForbiddenException(CurrencyFetchException ex) {
-		String customErrorMessage = "Error: " + "Access to the SWOP API is forbidden. ";
-		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(customErrorMessage);
+	public ResponseEntity<CurrencyFetchException> handleForbiddenException(CurrencyFetchException ex) {
+		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ex);
+	}
+	
+	@ExceptionHandler(ExchangeAPIException.class)
+	public ResponseEntity<ExchangeAPIException> handleExchangeAPIException(ExchangeAPIException ex) {
+		return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(ex);
 	}
 
 }

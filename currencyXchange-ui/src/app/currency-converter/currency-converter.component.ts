@@ -74,9 +74,15 @@ export class CurrencyConverterComponent  implements OnInit{
         tap ( data => {
           this.convertedAmount = data.convertedAmount; // Extract converted amount from API response
         }),
-        catchError(() => {
-          console.error('Error fetching exchange rate.');
-          this.errorMessage = 'Currently we are only supporting basic currency'; // Set error message
+        catchError((error) => {
+          console.error('Error fetching exchange rate.',error);
+          if (error.status === 403) {
+            this.errorMessage = 'Some of the Currencies are not supported for developer plan, please upgrade';
+          } else if (error.status === 400) {
+            this.errorMessage = 'Invalid request. Please check your inputs.';
+          } else {
+            this.errorMessage = 'An unexpected error occurred while fetching exchange rate. Please contact administrator';
+          }
           
           return EMPTY; // Return empty Observable to suppress error
         })

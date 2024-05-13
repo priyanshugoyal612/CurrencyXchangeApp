@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.util.StringUtils;
-import com.currency.exchange.enums.Currency;
 import com.currency.exchange.helper.CurrencyValidator;
 import com.currency.exchange.model.BaseCurrency;
 import com.currency.exchange.model.CurrencyResponse;

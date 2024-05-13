@@ -2,8 +2,6 @@ package com.currency.exchange.service;
 
 import java.math.BigDecimal;
 import java.util.List;
-
-import com.currency.exchange.enums.Currency;
 import com.currency.exchange.model.BaseCurrency;
 import com.currency.exchange.model.Rate;
 
