@@ -11,13 +11,14 @@ nd the API will return the converted value based on the provided exchange rates.
 - Implement caching for improved performance.
 - Ensure security with CSRF and CSP.
 - Containerize the application with Docker for consistent deployment.
-- Add instrumentation with InfluxDB and Grafana for real-time monitoring and analytics.
+- Add instrumentation with InfluxDB and Grafana for real-time monitoring and analytics. Its also preloaded with the dashboard
 - Provide a Angular 17 user interface for smooth interactions with the currency conversion service.
 
 
 Technical clarification
 • Spring Boot 3
 • Maven
+• Java 21
 • Angular 17
 • EhCache
 • Grafana
@@ -33,20 +34,26 @@ To run the currency conversion application using Docker Compose, follow these st
 
 1. Clone the repository:
 
-   git clone https://github.com/your-username/currency-conversion-app.git
+   git clone https://github.com/priyanshugoyal612/CurrencyXchangeApp.git
 
 2. Navigate to the project directory then backend app:
   cd currency-conversion-app/
 3. To build the backend please run 
   
-* To Start the Backend
-  * Windows: mvnw.cmd spring-boot:run
-  * Unix: mvnw spring-boot:run
+* To build the Backend
+  *  mvn clean install
 
-* To Start Frontend
-  * npm install
+
+* Then come to the root directory where dockercompose is present and run 
+  * docker-compose up
   * npm start
 
-* After application started you can check
+* After application started you can check the CurrencyXchangeApp
   * http://localhost:4200/
+  
+  * After Backend started you can check the CurrencyXchangeApp
+  * http://localhost:8080/a[i/exchange
+  
+  * After Grafana started you can check the CurrencyXchangeApp
+  * http://localhost:3000/
   
